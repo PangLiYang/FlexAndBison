@@ -40,7 +40,7 @@ questions:
     ;
 
 question:
-    NUM COLON eqs ENDL {
+    NUM COLON eqs ENDLS {
         cout << $1 << ": ";
 
         if (divZero) {
@@ -55,24 +55,6 @@ question:
             eq = true;
             ieq = true;
         }
-    }
-    | NUM COLON eqs END_OF_FILE {
-        cout << $1 << ": ";
-
-        if (divZero) {
-            yyerror("Division by Zero");
-            divZero = false;
-            eq = true;
-            ieq = true;
-        } else if (eq && ieq) {
-            cout << "YES" << endl;
-        } else {
-            cout << "NO" << endl;
-            eq = true;
-            ieq = true;
-        }
-
-        exit(0);
     }
     | ENDL {
         cout << "An empty line" << endl;
@@ -148,6 +130,11 @@ factor:
     | LPAREN expr RPAREN {
     $$ = $2;
     }
+    ;
+
+ENDLS:
+    ENDL
+    |
     ;
 
 %%
