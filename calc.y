@@ -138,7 +138,7 @@ term:
         if ($3 == 0) {
             divZero = true;
         }
-        $$ = $1 / $3;
+        $$ = $1 / 1;
     }
     | factor
     ;
