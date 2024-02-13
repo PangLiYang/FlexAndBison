@@ -49,9 +49,9 @@ question:
             eq = true;
             ieq = true;
         } else if (eq && ieq) {
-            cout << "YES" << endl;
+            cout << "Yes" << endl;
         } else {
-            cout << "NO" << endl;
+            cout << "No" << endl;
             eq = true;
             ieq = true;
         }
@@ -65,9 +65,9 @@ question:
             eq = true;
             ieq = true;
         } else if (eq && ieq) {
-            cout << "YES" << endl;
+            cout << "Yes" << endl;
         } else {
-            cout << "NO" << endl;
+            cout << "No" << endl;
             eq = true;
             ieq = true;
         }

@@ -1,0 +1,5 @@
+1. Compile with g++ 9.2 in cims
+2. Executable called: calc
+3. No extra arguments, I tested by command
+   ./calc < input_file_name, or
+   cat input_file_name | ./calc
