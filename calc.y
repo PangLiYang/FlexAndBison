@@ -77,6 +77,10 @@ question:
     | ENDL {
         cout << "An empty line" << endl;
     }
+    | END_OF_FILE {
+            cout << "An empty line" << endl;
+            exit(0);
+        }
     ;
 
 eqs:
@@ -137,8 +141,10 @@ term:
     | term DIV factor {
         if ($3 == 0) {
             divZero = true;
+            $$ = $1 / 1;
+        } else {
+            $$ = $1 / $3;
         }
-        $$ = $1 / 1;
     }
     | factor
     ;
